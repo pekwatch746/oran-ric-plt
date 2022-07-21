@@ -37,7 +37,6 @@ while [ ${READY} != 0 ]; do
 done
 echo "servcm up and running"
 
-wait
 eval $(helm env |grep HELM_REPOSITORY_CACHE)
 echo ${HELM_REPOSITORY_CACHE}
 mkdir -p "${HELM_REPOSITORY_CACHE}/local/"
@@ -52,4 +51,4 @@ echo "checking that ric-common templates were added"
 helm search repo local/ric-common
 
 
-
+exit 0
