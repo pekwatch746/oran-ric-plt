@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 ################################################################################
 #   Copyright (c) 2022 Nokia.                                                  #
 #                                                                              #
@@ -36,6 +37,7 @@ while [ ${READY} != 0 ]; do
 done
 echo "servcm up and running"
 
+wait
 eval $(helm env |grep HELM_REPOSITORY_CACHE)
 echo ${HELM_REPOSITORY_CACHE}
 mkdir -p "${HELM_REPOSITORY_CACHE}/local/"
