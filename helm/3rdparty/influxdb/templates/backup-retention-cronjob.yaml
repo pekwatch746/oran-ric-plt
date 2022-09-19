@@ -14,7 +14,7 @@
 #   limitations under the License.                                             #
 ################################################################################
 {{- if .Values.backupRetention.enabled }}
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: {{ include "common.fullname.influxdb" . }}-backup-retention

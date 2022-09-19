@@ -5,7 +5,7 @@
 {{- $path := .Values.portal.ingress.path -}}
 {{- $tls := .Values.portal.ingress.tls -}}
 {{- $hostname := .Values.portal.ingress.hostname -}}
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1
 kind: Ingress
 metadata:
   name: {{ template "kong.fullname" . }}-portal

@@ -3,7 +3,7 @@
 {{- $servicePort := include "kong.ingress.servicePort" .Values.proxy -}}
 {{- $path := .Values.proxy.ingress.path -}}
 {{- $hosts_count := len .Values.proxy.ingress.hosts -}}
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1
 kind: Ingress
 metadata:
   name: {{ template "kong.fullname" . }}-proxy
